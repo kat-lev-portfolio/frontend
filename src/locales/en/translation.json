@@ -1,5 +1,8 @@
 {
-    "welcome": "Welcome",
-    "description": "This is the English page.",
-    "change_language": "Switch to Spanish"
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "portfolio": "Portfolio",
+    "language": "ES"
   }
+}
