@@ -1,6 +1,11 @@
+import Navbar from "./../components/Navbar";
+
 function Portfolio() {
     return (
-        <h1>Portfolio</h1>
+        <>
+            <Navbar />
+            <h1>Portfolio</h1>
+        </>
     )
 }
 
