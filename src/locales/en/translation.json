@@ -4,5 +4,9 @@
     "about": "About",
     "portfolio": "Portfolio",
     "language": "ES"
+  },
+
+  "project": {
+  "more": "More details"
   }
 }

@@ -1,0 +1,13 @@
+.nav {
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  padding: 10px;
+  background-color: var(--navy);
+}
+
+.navGroup {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}

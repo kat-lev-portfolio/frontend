@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import styles from "./../Navbar/Navbar.module.css";
 import Button from '../Button/Button';
 import { useTranslation } from 'react-i18next';
 
@@ -11,8 +12,8 @@ export default function Navbar() {
   };
 
   return (
-    <nav className="flex justify-between items-center p-4">
-      <div className="flex items-center gap-4">
+    <nav className={styles.nav}>
+      <div className={styles.navGroup}>
         <Button to="/home" width="medium" label="nav.home" />
         <Button to="/about" width="medium" label="nav.about" />
         <Button to="/portfolio" width="medium" label="nav.portfolio" />
