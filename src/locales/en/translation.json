@@ -6,6 +6,11 @@
     "language": "ES"
   },
 
+  "about": {
+    "title": "hi, i'm kat",
+    "description": "Longer description goes here"
+  },
+
   "project": {
       "title": "Project title",
       "description": "Project description",
