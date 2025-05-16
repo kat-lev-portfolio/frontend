@@ -1,5 +1,12 @@
 .aboutImageContainer{
-    border: 1px solid pink;
-    height: 100px;
-    width: 100px;
+    border: 1px solid var(--orange);
+    border-radius: 15px;
+    height: 200px;
+    width: 200px;
+}
+
+.image{
+    border-radius: 15px;
+    height: 100%;
+    width: 100%;
 }
