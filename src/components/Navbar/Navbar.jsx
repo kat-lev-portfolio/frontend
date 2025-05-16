@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import Button from '../Button/Button';
 import { useTranslation } from 'react-i18next';
 
 export default function Navbar() {
@@ -12,21 +13,14 @@ export default function Navbar() {
   return (
     <nav className="flex justify-between items-center p-4">
       <div className="flex items-center gap-4">
-        <Link to="/" className="">
-          {t('nav.home')}
-        </Link>
-        <Link to="/about" className="">
-          {t('nav.about')}
-        </Link>
-        <Link to="/portfolio" className="">
-          {t('nav.portfolio')}
-        </Link>
-        <button
+        <Button to="/home" width="medium" label="nav.home" />
+        <Button to="/about" width="medium" label="nav.about" />
+        <Button to="/portfolio" width="medium" label="nav.portfolio" />
+        <Button
           onClick={toggleLanguage}
-          className="ml-4 px-2 py-1 text-sm"
-        >
-          {t('nav.language')}
-        </button>
+          width="small"
+          label="nav.language"
+          />
       </div>
     </nav>
   );

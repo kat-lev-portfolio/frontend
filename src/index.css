@@ -1,10 +1,11 @@
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
-
 /* Default */
-
 :root {
+  --orange: #FE8E45;
+  --purple: #8642D2;
+  --navy: #323B60;
+  --black: #000000;
+  --white: #FFFFFF;
+/* 
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
@@ -70,7 +71,7 @@ button:focus-visible {
   }
   button {
     background-color: #f9f9f9;
-  }
+  } */
 }
 
 
