@@ -5,6 +5,7 @@ function AboutMe() {
         <>
         <Navbar />
         <h1>About</h1>
+        <h2>hi, i'm kat</h2>
         </>
     )
 }

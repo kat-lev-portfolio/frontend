@@ -5,6 +5,30 @@
   --navy: #323B60;
   --black: #000000;
   --white: #FFFFFF;
+
+  body {
+  font-family: 'Poppins', sans-serif;
+  color: var(--black);
+
+  background-image: url('/src/assets/background.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  margin: 0;
+}
+
+h2, .pacifico {
+  font-family: 'Pacifico', cursive;
+  color: var(--black);
+}
+
+.bold {
+  font-weight: 700;
+  color: var(--black);
+}
+
+
 /* 
   font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
