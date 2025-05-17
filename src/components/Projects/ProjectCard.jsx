@@ -15,7 +15,8 @@ function ProjectCard({ project, onClick }) {
         // funFact={project.funFact}
         // stack={project.stack}
       />
-      <ProjectImage /> // luego add props
+      <ProjectImage /> 
+      {/* luego add image props */}
       </div>
       <Button 
         onClick={() => onClick(project)}
