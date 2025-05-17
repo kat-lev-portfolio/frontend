@@ -5,7 +5,6 @@ function AboutMe() {
     return (
         <>
         <Navbar />
-        <h1>About</h1>
         <About />
         </>
     )

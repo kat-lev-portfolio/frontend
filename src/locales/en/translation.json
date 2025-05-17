@@ -12,8 +12,12 @@
   },
 
   "project": {
-      "title": "Project title",
-      "description": "Project description",
-      "more": "More details"
+    "title": "Title",
+    "shortDescription": "Short description",
+    "longDescription": "Long description",
+    "categories": "Category",
+    "stack": "Stack",
+    "funFact": "Fun fact",
+    "more": "Click to see more"
   }
 }

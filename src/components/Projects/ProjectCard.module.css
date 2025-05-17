@@ -1,9 +1,10 @@
-.container{
+.projectCardContainer{
     border-radius: 15px;
     background-color: var(--white);
     border: 1px solid var(--purple);
     display: flex;
     flex-wrap: wrap;
+    flex-direction: column;
     justify-content: center;
     justify-self: center;
     padding: 10px;
@@ -11,7 +12,7 @@
     margin: 20px auto 20px auto;
 }
 
-.wrapper{
+.projectCardWrapper{
     width: 90%;
     display: flex;
     justify-content: space-between;
