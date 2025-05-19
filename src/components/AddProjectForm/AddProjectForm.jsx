@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
 import styles from "./../AddProjectForm/AddProjectForm.module.css";
 import Button from '../Button/Button';
+import PhotoUpload from "./../PhotoUpload/PhotoUpload.jsx";
 
 const AddProjectForm = () => {
-
     const [formData, setFormData] = useState({
     title: '',
     shortDescription: '',
@@ -94,6 +94,7 @@ const AddProjectForm = () => {
                     onChange={handleChange}
                     required
                     />
+                <PhotoUpload />
                 <Button width="large" label="submit" onClick={handleSubmit}/>
         </form>
         </>

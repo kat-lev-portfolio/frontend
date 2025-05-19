@@ -1,7 +1,7 @@
 .ProjectForm{
     background-color: var(--white);
     border-radius: 5px;
-    margin: 10%;
+    margin: 5%;
     padding: 2%;
     display: flex;
     flex-direction: column;
