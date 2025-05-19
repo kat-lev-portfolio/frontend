@@ -51,19 +51,25 @@ const AddProjectForm = () => {
                     onChange={handleChange}
                     required
                     />
-                <label>Categories:</label>
-                    <select
-                    name="category"
-                    multiple
-                    value={formData.category}
+                <label>Categories (select all that apply):</label>
+                    {['Frontend', 'Backend', 'Writing/copy'].map((cat) => (
+                    <div key={cat}>
+                        <input
+                        type="checkbox"
+                        name="category"
+                        value={cat}
+                        checked={formData.category.includes(cat)}
                     onChange={(e) => {
-                    const selected = Array.from(e.target.selectedOptions, option => option.value);
-                    setFormData(prev => ({ ...prev, category: selected }));
-                    }}>
-                        <option value="front">Frontend</option>
-                        <option value="back">Backend</option>
-                        <option value="lang">Language</option>
-                    </select>
+                    const { value, checked } = e.target;
+                    setFormData(prev => ({...prev,
+                    category: checked ? [...prev.category, value]
+                    : prev.category.filter(c => c !== value)
+                    }));
+                    }}
+                    />
+                    <label>{cat}</label>
+                    </div>
+                    ))}
                 <label>Fun fact:</label>
                     <input
                     type="text"
@@ -80,7 +86,7 @@ const AddProjectForm = () => {
                     onChange={handleChange}
                     required
                     />
-                <label>GitHub:</label>
+                <label>GitHub URL:</label>
                     <input
                     type="text"
                     name="gitHubUrl"
