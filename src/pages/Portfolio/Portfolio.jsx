@@ -31,7 +31,6 @@ const projects = [
 return (
         <>
             <Navbar />
-            <h1>Portfolio</h1>
             <ProjectList projects={projects} onProjectClick={(project) => setSelectedProject(project)}  />
                   {selectedProject && (
                     <ProjectModal 

@@ -19,5 +19,9 @@
     "stack": "Stack",
     "funFact": "Fun fact",
     "more": "Click to see more"
+  },
+
+  "button":{
+    "submit": "Click to submit your form"
   }
 }
