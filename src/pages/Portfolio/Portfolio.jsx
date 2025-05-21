@@ -1,36 +1,38 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import ProjectModal from "../../components/Projects/ProjectModal.jsx";
 import Navbar from "../../components/Navbar/Navbar";
 import ProjectList from "../../components/Projects/ProjectList.jsx";
 
 function Portfolio() {
-const [selectedProject, setSelectedProject] = useState(null);
-const projects = [
-    {
-      id: 1,
-      title: "AI Cat Translator",
-      shortDescription: "Translates cat meows into human speech.",
-      longDescription: "This app was built using React and TensorFlow.js to translate cat meows into human speech, and was inspired by the creator's desire to understand their chatty cat",
-      category: ["front end", "linguistics"],
-      funFact: "Inspired by the creator's overly chatty cat.",
-      stack: "React, Node.js, TensorFlow.js",
-      githubUrl: "https://github.com/kat-lev"
-    },
-    {
-      id: 2,
-      title: "AI Cat Translator, v2",
-      shortDescription: "Translate human speech into cat meows.",
-      longDescription: "This app was built using React and TensorFlow.js to translate human speech into cat meows, and was inspired by the creator's desire to respond to their chatty cat.",
-      category: ["front end", "linguistics"],
-      funFact: "Inspired by the creator's desire to respond to their chatty cat.",
-      stack: "React, Node.js, TensorFlow.js",
-      githubUrl: "https://github.com/kat-lev"
-    },
-  ];
+  const [projects, setProjects] = useState([]);
+  const [selectedProject, setSelectedProject] = useState(null);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState(null);
+
+useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const response = await fetch("http://localhost:8080/api/projects");
+        if (!response.ok) {
+          throw new Error("Could not fetch projects from API");
+        }
+        const data = await response.json();
+        setProjects(data);
+      } catch (err) {
+        setError(err.message);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchProjects();
+  }, []);
 
 return (
         <>
             <Navbar />
+                  {loading && <p>Loading projects...</p>}
+                  {error && <p>{error}</p>}
             <ProjectList projects={projects} onProjectClick={(project) => setSelectedProject(project)}  />
                   {selectedProject && (
                     <ProjectModal 

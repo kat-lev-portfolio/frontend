@@ -10,13 +10,12 @@ function ProjectCard({ project, onClick }) {
       <ProjectText
         title={project.title}
         shortDescription={project.shortDescription}
-        // longDescription={project.longDescription}
         category={project.category}
-        // funFact={project.funFact}
-        // stack={project.stack}
       />
-      <ProjectImage /> 
-      {/* luego add image props */}
+      <ProjectImage 
+        imageSrc={`http://localhost:8080${project.imageSource}`} 
+        imageAlt={project.imageDescription} 
+      /> 
       </div>
       <Button 
         onClick={() => onClick(project)}

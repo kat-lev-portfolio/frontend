@@ -1,5 +1,16 @@
 .projectImageContainer{
-    border: 1px solid pink;
-    height: 100px;
-    width: 100px;
+  max-width: 300px;
+  width: 100%;  
+  margin: 0;
+  overflow: hidden;
+  border-radius: 12px;
+  background-color: #f0f0f0;
+}
+
+.projectImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  display: block;
+  border-radius: 8px;
 }

@@ -10,23 +10,28 @@ function ProjectModal({ project, onClose }) {
     <div className={styles.modalContainer} onClick={onClose}>
       <div className={styles.modalContent} onClick={e => e.stopPropagation()}>
         <button className={styles.closeModal} onClick={onClose}>✕</button>
-        <div className={styles.modalCard}><ProjectText
+        <div className={styles.modalCard}>
+        <ProjectText
           title={project.title}
           longDescription={project.longDescription}
           category={project.category}
           funFact={project.funFact}
           stack={project.stack}
           />
-        <ProjectImage /> 
-        {/* luego add props */}
+        <ProjectImage 
+          imageSrc={`http://localhost:8080${project.imageSource}`} 
+          imageAlt={project.imageDescription} 
+        /> 
         </div>
-            {project.githubUrl && (
-            <a href={project.githubUrl} target="_blank" rel="noopener noreferrer" className={styles.githubLink}>
+            <div className={styles.gitHubContainer}>
+              {project.gitHubUrl && (
+                <a href={project.gitHubUrl} target="_blank" rel="noopener noreferrer" className={styles.githubLink}>
                 <img src={githubIcon} alt="Link to GitHub repo" className={styles.githubIcon} />
-                View repo in GitHub
-            </a>
-            )}
-      </div>
+                <span>View repo in GitHub</span>
+                </a>
+              )}
+            </div>
+        </div>
     </div>
   );
 }
