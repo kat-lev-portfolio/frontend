@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import styles from './PhotoUpload.module.css';
 
 const PhotoUpload = ({ onFileSelect }) => {
   const [selectedFile, setSelectedFile] = useState(null);
   const [previewUrl, setPreviewUrl] = useState(null);
+  const { t, i18n } = useTranslation();
 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
@@ -23,11 +25,11 @@ const PhotoUpload = ({ onFileSelect }) => {
     return (
       <>
           <div className={styles.PhotoUploadContainer}>
-             <label>Select and upload your photo here</label>
+             <label>{t('photo.label')}</label>
                <input type="file" accept="image/*" onChange={handleFileChange} />
                  {previewUrl && (
                  <div className={styles.ThumbnailPreview}>
-                     <p>Preview:</p>
+                     <p>{t('photo.preview')}</p>
                      <img src={previewUrl} alt="Your selected image" style={{ width: '200px' }} />
                  </div>
                  )}

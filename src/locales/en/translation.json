@@ -4,13 +4,16 @@
     "about": "About",
     "portfolio": "Portfolio",
     "language": "ES"
-  },
-
+  }
+,
   "about": {
     "title": "hi, i'm kat",
-    "description": "Longer description goes here: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue erat arcu, et feugiat tellus cursus eu. Suspendisse congue ligula sed nisl elementum facilisis. Morbi aliquet aliquam fringilla. Cras ut mollis nisl. Fusce eu ante vitae orci dapibus ornare. Fusce quis massa vitae neque efficitur rutrum. Praesent non nibh fringilla, luctus nisi eu, venenatis est. Nunc at justo orci. Ut facilisis sodales velit at porta. Donec rutrum nec lorem vel congue. Pellentesque non tincidunt nisi. Praesent sed purus scelerisque, congue ligula eu, dapibus lorem. Vivamus et odio erat. Morbi gravida libero sed aliquam aliquet. Proin sed diam arcu. Morbi pellentesque auctor ligula. Praesent sit amet lectus posuere, malesuada sapien nec, eleifend nibh. Vivamus ornare gravida odio, ac pellentesque diam venenatis at. Donec ornare neque et ultrices maximus. Etiam congue posuere ipsum, a porttitor risus egestas eu. Curabitur volutpat risus neque, sit amet ultrices ligula elementum ut."
-  },
-
+    "description": "Longer description goes here: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue erat arcu, et feugiat tellus cursus eu. Suspendisse congue ligula sed nisl elementum facilisis. Morbi aliquet aliquam fringilla. Cras ut mollis nisl. Fusce eu ante vitae orci dapibus ornare. Fusce quis massa vitae neque efficitur rutrum. Praesent non nibh fringilla, luctus nisi eu, venenatis est. Nunc at justo orci. Ut facilisis sodales velit at porta. Donec rutrum nec lorem vel congue. Pellentesque non tincidunt nisi. Praesent sed purus scelerisque, congue ligula eu, dapibus lorem. Vivamus et odio erat. Morbi gravida libero sed aliquam aliquet. Proin sed diam arcu. Morbi pellentesque auctor ligula. Praesent sit amet lectus posuere, malesuada sapien nec, eleifend nibh. Vivamus ornare gravida odio, ac pellentesque diam venenatis at. Donec ornare neque et ultrices maximus. Etiam congue posuere ipsum, a porttitor risus egestas eu. Curabitur volutpat risus neque, sit amet ultrices ligula elementum ut.",
+    "contact": "get in touch...",
+    "icon1": "LinkedIn",
+    "icon2": "GitHub"
+  }
+,
   "project": {
     "title": "Title",
     "shortDescription": "Short description",
@@ -19,9 +22,43 @@
     "stack": "Stack",
     "funFact": "Fun fact",
     "more": "Click to see more"
-  },
-
+  }
+,
   "button":{
-    "submit": "Click to submit your form"
+    "submit": "Click to submit the form"
+  }
+,
+  "projectForm":{
+    "title": "Project title:", 
+    "titlePlaceholder": "FILL",
+    "shortDescription": "Short description (max 150 characters):",
+    "shortPlaceholder": "FILL",
+    "longDescription": "Longer description:",
+    "longPlaceholder": "FILL",
+    "categories": "Categories (select all that apply):",
+    "funFact": "Add a fun fact!",
+    "funFactPlaceholder": "FILL",
+    "stack": "Project stack:",
+    "stackPlaceholder": "FILL",
+    "gitHub": "GitHub URL:",
+    "gitHubPlaceholder": "FILL",
+    "imageDescription": "Add a description",
+    "imagePlaceholder": "FILL",
+    "submit": "Click to submit your project"
+  }
+,
+  "photo":{
+    "preview": "Preview:",
+    "label": "Select the photo to upload"
+  }
+,
+  "contact":{
+    "icon1": "LinkedIn",
+    "icon2": "GitHub"
+  }
+,
+    "alerts": {
+    "submitError": "Failed to submit project",
+    "submitSuccess": "Project submitted successfully:"
   }
 }

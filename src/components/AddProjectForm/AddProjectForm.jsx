@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
+import { useTranslation } from 'react-i18next';
 import styles from "./../AddProjectForm/AddProjectForm.module.css";
 import Button from '../Button/Button';
 import PhotoUpload from "./../PhotoUpload/PhotoUpload.jsx";
 
 const AddProjectForm = () => {
+    const { t, i18n } = useTranslation();
+
     const [formData, setFormData] = useState({
     title: '',
     shortDescription: '',
@@ -19,11 +22,6 @@ const AddProjectForm = () => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
-
-//   const handleSubmit = (e) => {
-//     e.preventDefault();
-//     console.log('Event submitted:', formData);
-//   };
 
 const handleSubmit = async (e) => {
   e.preventDefault();
@@ -54,44 +52,47 @@ const handleSubmit = async (e) => {
     });
 
     if (!response.ok) {
-      throw new Error('Failed to submit project');
+      throw new Error(t('alerts.submitError'));
     }
 
     const result = await response.json();
-    console.log('Project submitted successfully:', result);
+    console.log(t('alerts.submitSuccess'), result);
   } catch (error) {
-    console.error('Error submitting project:', error);
+    console.error(error.message, error);
   }
 };
 
     return(
         <>        
         <form onSubmit={handleSubmit} className={styles.ProjectForm}>
-                <label>Project title:</label>
+                <label>{t('projectForm.title')}</label>
                     <input
                     type="text"
                     name="title"
                     value={formData.title}
                     onChange={handleChange}
                     required
+                    placeholder={t("projectForm.titlePlaceholder")}
                     />
-                <label>Short description (max 150 characters):</label>
+                <label>{t('projectForm.shortDescription')}</label>
                     <input
                     type="text"
                     name="shortDescription"
                     value={formData.shortDescription}
                     onChange={handleChange}
                     required
+                    placeholder={t("projectForm.shortPlaceholder")}
                     />
-                <label>Longer description:</label>
+                <label>{t('projectForm.longDescription')}</label>
                     <input
                     type="text"
                     name="longDescription"
                     value={formData.longDescription}
                     onChange={handleChange}
                     required
+                    placeholder={t("projectForm.shortPlaceholder")}
                     />
-                <label>Categories (select all that apply):</label>
+                <label>{t('projectForm.categories')}</label>
                     {['Frontend', 'Backend', 'Writing/copy'].map((cat) => (
                     <div key={cat}>
                         <input
@@ -110,39 +111,43 @@ const handleSubmit = async (e) => {
                     <label>{cat}</label>
                     </div>
                     ))}
-                <label>Fun fact:</label>
+                <label>{t('projectForm.funFact')}</label>
                     <input
                     type="text"
                     name="funFact"
                     value={formData.funFact}
                     onChange={handleChange}
                     required
+                    placeholder={t("projectForm.funFactPlaceholder")}
                     />
-                <label>Stack:</label>
+                <label>{t('projectForm.stack')}</label>
                     <input
                     type="text"
                     name="stack"
                     value={formData.stack}
                     onChange={handleChange}
                     required
+                    placeholder={t("projectForm.stackPlaceholder")}
                     />
-                <label>GitHub URL:</label>
+                <label>{t('projectForm.gitHub')}</label>
                     <input
                     type="text"
                     name="gitHubUrl"
                     value={formData.gitHubUrl}
                     onChange={handleChange}
                     required
+                    placeholder={t("projectForm.gitHubPlaceholder")}
                     />
                 <PhotoUpload onFileSelect={(file) => setFormData(prev => ({ ...prev, imageFile: file }))} />
-                <label>Image description:</label>
+                <label>{t('projectForm.imageDescription')}</label>
                     <input
                     type="text"
                     name="imageDescription"
                     value={formData.imageDescription}
                     onChange={handleChange}
+                    placeholder={t("projectForm.imagePlaceholder")}
                     />
-                <Button width="large" label="submit" onClick={handleSubmit}/>
+                <Button width="large" label={t('projectForm.submit')} onClick={handleSubmit}/>
         </form>
         </>
     )

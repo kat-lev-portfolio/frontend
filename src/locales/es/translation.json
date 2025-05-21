@@ -2,7 +2,53 @@
   "nav": {
     "home": "Inicio",
     "about": "Sobre mí",
-    "portfolio": "Portfolio",
-    "language": "EN"
+    "portfolio": "Portafolio",
+    "language": "ES"
+  },
+
+  "about": {
+    "title": "hola, soy kat",
+    "description": "Descripción más larga aquí: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec congue erat arcu, et feugiat tellus cursus eu. Suspendisse congue ligula sed nisl elementum facilisis. Morbi aliquet aliquam fringilla. Cras ut mollis nisl. Fusce eu ante vitae orci dapibus ornare. Fusce quis massa vitae neque efficitur rutrum. Praesent non nibh fringilla, luctus nisi eu, venenatis est. Nunc at justo orci. Ut facilisis sodales velit at porta. Donec rutrum nec lorem vel congue. Pellentesque non tincidunt nisi. Praesent sed purus scelerisque, congue ligula eu, dapibus lorem. Vivamus et odio erat. Morbi gravida libero sed aliquam aliquet. Proin sed diam arcu. Morbi pellentesque auctor ligula. Praesent sit amet lectus posuere, malesuada sapien nec, eleifend nibh. Vivamus ornare gravida odio, ac pellentesque diam venenatis at. Donec ornare neque et ultrices maximus. Etiam congue posuere ipsum, a porttitor risus egestas eu. Curabitur volutpat risus neque, sit amet ultrices ligula elementum ut.",
+    "contact": "ponte en contacto conmigo...",
+    "icon1": "LinkedIn",
+    "icon2": "GitHub"
+  },
+
+  "project": {
+    "title": "Título",
+    "shortDescription": "Descripción corta",
+    "longDescription": "Descripción larga",
+    "categories": "Categoría",
+    "stack": "Tecnologías",
+    "funFact": "Dato curioso",
+    "more": "Haz clic para ver más"
+  },
+
+  "button": {
+    "submit": "Haz clic para enviar el formulario"
+  },
+
+  "projectForm": {
+    "title": "Título del proyecto:",
+    "titlePlaceholder": "ESCRIBE",
+    "shortDescription": "Descripción corta (máx. 150 caracteres):",
+    "shortPlaceholder": "ESCRIBE",
+    "longDescription": "Descripción más larga:",
+    "longPlaceholder": "ESCRIBE",
+    "categories": "Categorías (selecciona todas las que apliquen):",
+    "funFact": "¡Agrega un dato curioso!",
+    "funFactPlaceholder": "ESCRIBE",
+    "stack": "Tecnologías usadas:",
+    "stackPlaceholder": "ESCRIBE",
+    "gitHub": "URL de GitHub:",
+    "gitHubPlaceholder": "ESCRIBE",
+    "imageDescription": "Agrega una descripción",
+    "imagePlaceholder": "ESCRIBE",
+    "submit": "Haz clic para enviar tu proyecto"
+  },
+
+  "photo": {
+    "preview": "Vista previa:",
+    "label": "Selecciona la foto para subir"
   }
 }

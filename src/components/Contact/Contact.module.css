@@ -3,3 +3,8 @@
     width: 50px;
     margin: 10px;
 }
+
+.contactContainer{
+    display: flex;
+    flex-direction: row;
+}
