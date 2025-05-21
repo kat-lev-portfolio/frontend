@@ -1,10 +1,27 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { useState, Navigate, useEffect } from "react";
+
 import Home from "../pages/Home/Home.jsx";
 import Portfolio from "../pages//Portfolio/Portfolio.jsx";
 import AboutMe from "../pages/AboutMe/AboutMe.jsx";
-import Form from "../pages/Form/Form.jsx";
+import Login from "../pages/Login/Login.jsx";
+import Create from "../pages/Create/Create.jsx";
 
 function Router (){
+  const [isAuthenticated, setIsAuthenticated] = useState(
+    localStorage.getItem("isAuthenticated") === "true"
+  );
+
+  const handleLoginSuccess = () => {
+    setIsAuthenticated(true);
+    localStorage.setItem("isAuthenticated", "true");
+  };
+
+  useEffect(() => {
+    const auth = localStorage.getItem("isAuthenticated");
+    setIsAuthenticated(auth === "true");
+  }, []);
+
 return (
     <BrowserRouter>
         <Routes>
@@ -12,7 +29,12 @@ return (
           <Route path="/home" element={<Home />} />
           <Route path="/about" element={<AboutMe />}/>
           <Route path="/portfolio" element={<Portfolio />}/>
-          <Route path="/form" element={<Form />}/>
+          <Route path="/login" element={
+            <Login onLoginSuccess={handleLoginSuccess} />
+            }/>
+          <Route path="/create" element={
+            isAuthenticated ? <Create /> : <Navigate to="/home" />
+            }/>
         </Routes>        
     </BrowserRouter>
   )

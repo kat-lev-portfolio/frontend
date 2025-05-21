@@ -64,37 +64,6 @@ const handleSubmit = async (e) => {
   }
 };
 
-//   const form = new FormData();
-//   form.append('title', formData.title);
-//   form.append('shortDescription', formData.shortDescription);
-//   form.append('longDescription', formData.longDescription);
-//   formData.category.forEach(cat => form.append('category', cat));
-//   form.append('funFact', formData.funFact);
-//   form.append('stack', formData.stack);
-//   form.append('gitHubUrl', formData.gitHubUrl);
-//   form.append('imageDescription', formData.imageDescription);
-
-//   if (formData.imageFile) {
-//     form.append('imageFile', formData.imageFile);
-//   }
-
-//   try {
-//     const response = await fetch("http://localhost:8080/api/projects", {
-//       method: "POST",
-//       body: form
-//     });
-
-//     if (!response.ok) {
-//       throw new Error('Failed to submit project');
-//     }
-
-//     const result = await response.json();
-//     console.log('Project submitted successfully:', result);
-//   } catch (error) {
-//     console.error('Error submitting project:', error);
-//   }
-// };
-
     return(
         <>        
         <form onSubmit={handleSubmit} className={styles.ProjectForm}>
