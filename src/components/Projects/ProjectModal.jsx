@@ -2,9 +2,11 @@ import ProjectText from './ProjectText';
 import ProjectImage from './ProjectImage';
 import githubIcon from "./../../assets/github-icon.png";
 import styles from "./../Projects/ProjectModal.module.css";
+import { useTranslation } from 'react-i18next';
 
 function ProjectModal({ project, onClose }) {
   if (!project) return null;
+      const { t, i18n } = useTranslation();
 
   return (
     <div className={styles.modalContainer} onClick={onClose}>
@@ -27,7 +29,7 @@ function ProjectModal({ project, onClose }) {
               {project.gitHubUrl && (
                 <a href={project.gitHubUrl} target="_blank" rel="noopener noreferrer" className={styles.githubLink}>
                 <img src={githubIcon} alt="Link to GitHub repo" className={styles.githubIcon} />
-                <span>View repo in GitHub</span>
+                <span>{t('modal.repo')}</span>
                 </a>
               )}
             </div>

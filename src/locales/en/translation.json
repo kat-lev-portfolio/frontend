@@ -25,7 +25,8 @@
   }
 ,
   "button":{
-    "submit": "Click to submit the form"
+    "submit": "Click to submit the form",
+    "send": "Click to login"
   }
 ,
   "projectForm":{
@@ -60,5 +61,18 @@
     "alerts": {
     "submitError": "Failed to submit project",
     "submitSuccess": "Project submitted successfully:"
+  }
+,
+    "login": {
+      "successfulLogin": "Login successful! Redirecting in 4 seconds...",
+      "unsuccessfulLogin": "Invalid username or password",
+      "usernameLabel": "Enter your username:",
+      "usernamePlaceholder": "Enter your username here",
+      "passwordLabel": "Enter your password:",
+      "passwordPlaceholder": "Enter your password here"
+    }
+,
+    "modal":{
+      "repo": "View the repo in GitHub"
   }
 }

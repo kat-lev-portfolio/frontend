@@ -1,5 +1,6 @@
 .LoginFormContainer{
     background-color: var(--white);
+    min-width: 400px;
     border-radius: 5px;
     margin: 5%;
     padding: 2%;

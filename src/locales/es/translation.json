@@ -25,7 +25,8 @@
   },
 
   "button": {
-    "submit": "Haz clic para enviar el formulario"
+    "submit": "Haz clic para enviar el formulario",
+    "send": "Iniciar sesión"
   },
 
   "projectForm": {
@@ -45,10 +46,23 @@
     "imageDescription": "Agrega una descripción",
     "imagePlaceholder": "ESCRIBE",
     "submit": "Haz clic para enviar tu proyecto"
-  },
-
+  }
+,
   "photo": {
     "preview": "Vista previa:",
     "label": "Selecciona la foto para subir"
+  }
+,
+"login": {
+  "successfulLogin": "¡Inicio de sesión exitoso! Redirigiendo en 4 segundos...",
+  "unsuccessfulLogin": "Nombre de usuario o contraseña inválidos",
+  "usernameLabel": "Ingrese su nombre de usuario:",
+  "usernamePlaceholder": "Escriba su nombre de usuario aquí",
+  "passwordLabel": "Ingrese su contraseña:",
+  "passwordPlaceholder": "Escriba su contraseña aquí"
+  }
+,
+  "modal":{
+    "repo": "Ver el repositorio en GitHub"
   }
 }
