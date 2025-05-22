@@ -1,12 +1,39 @@
-# React + Vite
+# Portfolio Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This is the **React frontend** for my Portfolio project. It allows users to view my portfolio, switch languages, and authenticate to create new projects.
 
-Currently, two official plugins are available:
+## 🌐 Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React
+- React Router
+- i18next (Internationalization)
+- Axios
+- Playwright (for end-to-end testing)
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Prerequisites
+
+- Node.js (v16+)
+- Backend server running on `http://localhost:8080`
+
+### Installation
+
+cd frontend
+npm install
+
+### Running the app
+
+npm run dev
+
+### 🔐 Authentication
+Authentication is handled via form login. Authenticated users can access the /create page to add projects.
+
+### 🖼️ Images
+Images are served from the backend at /uploads/* and should load directly in the browser.
+
+### 💬 Translations
+The UI supports multiple languages (currently English, French, and Spanish). Use the toggle button in the navbar to switch languages.
+
+### 📄 License
+MIT
